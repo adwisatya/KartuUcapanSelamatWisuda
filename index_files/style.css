@@ -1,0 +1,589 @@
+/*
+Template Name: DASHGUM FREE - Bootstrap 3.2 Admin Theme
+Template Version: 1.0
+Author: Carlos Alvarez
+Website: http://blacktie.co
+Premium: http://www.gridgum.com
+*/
+
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+
+/* BASIC THEME CONFIGURATION */
+body {
+    color: #797979;
+    background: #1b2432;
+    background-size: cover;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size:13px;
+}
+.bg-login{
+	background-image: url('../img/background.jpg');
+}
+
+/* FORMS CONFIGURATION */
+
+input[type=text], input[type=number], input[type=email], input[type=password], select, button.btn {
+    border-radius: 1px !important;
+    background-color: #070F1C;
+    border-color: #2D3540;
+    color: white;
+}
+
+input.no-border {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input[type=radio] {
+    transform: scale(1.5);
+}
+
+label {
+    font-weight: bold;
+}
+
+/* TOGGLE CONFIGURATION */
+.has-switch {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1.231;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 80px;
+    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
+    mask: url('../img/mask.png') 0 0 no-repeat;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.has-switch.deactivate {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default !important;
+}
+.has-switch.deactivate label,
+.has-switch.deactivate span {
+    cursor: default !important;
+}
+.has-switch > div {
+    width: 162%;
+    position: relative;
+    top: 0;
+}
+.has-switch > div.switch-animate {
+    -webkit-transition: left 0.25s ease-out;
+    -moz-transition: left 0.25s ease-out;
+    -o-transition: left 0.25s ease-out;
+    transition: left 0.25s ease-out;
+    -webkit-backface-visibility: hidden;
+}
+.has-switch > div.switch-off {
+    left: -63%;
+}
+.has-switch > div.switch-off label {
+    background-color: #7f8c9a;
+    border-color: #bdc3c7;
+    -webkit-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
+    box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
+}
+.has-switch > div.switch-on {
+    left: 0%;
+}
+.has-switch > div.switch-on label {
+    background-color: #41cac0;
+}
+.has-switch input[type=checkbox] {
+    display: none;
+}
+.has-switch span {
+    cursor: pointer;
+    font-size: 14.994px;
+    font-weight: 700;
+    float: left;
+    height: 29px;
+    line-height: 19px;
+    margin: 0;
+    padding-bottom: 6px;
+    padding-top: 5px;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    z-index: 1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: 0.25s ease-out;
+    -moz-transition: 0.25s ease-out;
+    -o-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+    -webkit-backface-visibility: hidden;
+}
+.has-switch span.switch-left {
+    border-radius: 30px 0 0 30px;
+    background-color: #2A3542;
+    color: #41cac0;
+    border-left: 1px solid transparent;
+}
+.has-switch span.switch-right {
+    border-radius: 0 30px 30px 0;
+    background-color: #bdc3c7;
+    color: #ffffff;
+    text-indent: 7px;
+}
+.has-switch span.switch-right [class*="fui-"] {
+    text-indent: 0;
+}
+.has-switch label {
+    border: 4px solid #2A3542;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    float: left;
+    height: 29px;
+    margin: 0 -21px 0 -14px;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 29px;
+    z-index: 100;
+    -webkit-transition: 0.25s ease-out;
+    -moz-transition: 0.25s ease-out;
+    -o-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+    -webkit-backface-visibility: hidden;
+}
+.switch-square {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
+    mask: url('../img/mask.png') 0 0 no-repeat;
+}
+.switch-square > div.switch-off label {
+    border-color: #7f8c9a;
+    border-radius: 6px 0 0 6px;
+}
+.switch-square span.switch-left {
+    border-radius: 6px 0 0 6px;
+}
+.switch-square span.switch-left [class*="fui-"] {
+    text-indent: -10px;
+}
+.switch-square span.switch-right {
+    border-radius: 0 6px 6px 0;
+}
+.switch-square span.switch-right [class*="fui-"] {
+    text-indent: 5px;
+}
+.switch-square label {
+    border-radius: 0 6px 6px 0;
+    border-color: #41cac0;
+}
+
+
+
+/*LOGIN CONFIGURATION PAGE*/
+.form-login {
+    max-width: 330px;
+    margin: 100px auto 0;
+    background: #eee;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.form-login h2.form-login-heading {
+    margin: 0;
+    padding: 25px 20px;
+    text-align: center;
+    background: #68dff0;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.login-wrap {
+    padding: 20px;
+}
+.login-wrap .registration {
+    text-align: center;
+}
+.login-social-link {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+/*LOCK SCREEN CONF*/
+#showtime {
+    width: 100%;
+    color: #fff;
+    font-size: 90px;
+    margin-bottom: 30px;
+    margin-top: 250px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+}
+
+.lock-screen {
+    text-align: center;
+}
+
+.lock-screen a {
+    color: white;
+}
+
+.lock-screen a:hover {
+    color: #48cfad
+}
+
+.lock-screen i {
+    font-size: 60px;
+}
+
+.lock-screen .modal-content {
+    position: relative;
+    background-color: #f2f2f2;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+
+/*footer*/
+.site-footer {
+    background: #68dff0;
+    color: #fff;
+    padding: 10px 0;
+}
+
+
+.go-top {
+    margin-right: 1%;
+    float: right;
+    background: rgba(255,255,255,.5);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.go-top i {
+    color: #2A3542;
+}
+
+.site-min-height {
+    min-height: 900px;
+}
+
+img#logo-telkom
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: auto;
+}
+
+div#footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    padding-top: 10px;
+}
+
+div#footer > p
+{   
+    opacity: 0.5;
+}
+
+/* Added by Arief */
+.bookmark-menu
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.form-box
+{
+    margin: 70px auto 10px;
+    max-width: 700px;
+    background-color: transparent;
+    opacity: 0.95;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: white;
+}
+
+.form-box label {
+    font-size: 1.2em;
+}
+
+.form-box input[type=text],
+.form-box input[type=number],
+.form-box input[type=email],
+.form-box input[type=password],
+.form-box select,
+.form-box .btn {
+    background-color: #070F1C;
+    border-color: #2D3540;
+    height: 50px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: transparent;
+    border-bottom: none;
+    color: #fff;
+}
+
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover {
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #fff;
+}
+
+/*.form-box input[type=radio] {
+    display:none;
+}
+
+.form-box input[type="radio"] + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+.form-box input[type="radio"] + label:before {
+    content: "";
+    display: inline-block;
+    border-radius: 8px;
+     
+    width: 16px;
+    height: 16px;
+     
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #aaa;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+.form-box input[type="radio"]:checked + label span{
+    background-color: #4A5566;
+}*/
+
+.radio input[type=radio] {
+  display: none;
+}
+.radio input[type=radio] + label:before {
+  content: '';
+  display: inline-block;
+  border: 2px solid transparent;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+.radio label:hover:before {
+  box-shadow: inset 0 0 5px trans;
+}
+
+.radio input[type=radio]:checked + label:before {
+  border-width: 5px;
+  height: 6px;
+  width: 6px;
+}
+
+.form-box .radio label {
+    display: block;
+    width: 100%;
+    height: 80px;
+    background-color: #101A29;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+    border-radius: 4px;
+}
+
+.form-box .radio label ul {
+    list-style: none;
+    padding-left: 14px;
+    font-weight: normal;
+}
+
+.form-box .radio label ul li {
+    font-size: 0.75em;
+}
+
+.form-box .radio input[type=radio]:hover + label:hover {
+    background-color: #2D3540;
+}
+
+.form-box .radio input[type=radio]:checked + label,
+.form-box .radio input[type=radio]:checked:hover + label {
+    background-color: #4A5566;
+}
+
+.transbox {
+    margin: 70px auto 10px;
+    max-width: 700px;
+    background-color: transparent;
+    opacity: 0.95;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: white;
+}
+
+.transbox h2.transbox-heading {
+    margin: 0;
+    padding: 25px 20px;
+    text-align: center;
+    background: #ac2925;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.transbox-wrap {
+    padding: 20px;
+}
+
+#add_user {
+    max-width: 700px;
+}
+
+.form-box .nav {
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.form-box .nav li {
+    text-align: center;
+    width: 50%;
+}
+
+.heading {
+    margin-top: 15px;
+}
+
+.heading .nav li {
+    text-align: center;
+    width: 33.3%;
+}
+
+.heading .nav li.active {
+    font-weight: bold;
+}
+
+h1.title {
+    color: #fff;
+    font-size: 4em;
+    margin-top: 200px;
+    font-weight: bold;
+}
+
+.title-helper {
+    color: #fff;
+}
+
+.helper {
+    font-size: 0.8em;
+}
+
+.button-submit {
+    margin-top: 30px;
+}
+
+ol.description-list {
+    padding-left: 15px;
+}
+
+div.description {
+    font-size: 0.9em;
+    padding: 8px;
+    color: #DCD2ED;
+    border-radius: 2px;
+    background-color: #101A29;
+}
+
+div.description ol > li {
+    margin-bottom: 5px;
+}
+
+.alert {
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+input[type=text]::-webkit-input-placeholder {
+    font-size: 0.65em;
+}
+
+input[type=text]:-moz-placeholder {
+    font-size: 0.65em;
+}
+
+input[type=text]::-moz-placeholder {
+    font-size: 0.65em;
+}
+
+input[type=text]:-ms-input-placeholder {
+    font-size: 0.65em;
+}
+
+#nik_keyboard,
+#username_keyboard {
+    top: auto !important;
+}
+
+.ui-keyboard-button {
+    font-size: 1.25em;
+}
+
+.bootbox-success .bootbox-body,
+.bootbox-error .bootbox-body {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.bootbox-success .modal-footer,
+.bootbox-error .modal-footer {
+    text-align: center;
+}
